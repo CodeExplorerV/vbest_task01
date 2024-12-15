@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DYNAMIC EDUCATION SITE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    select, button {
+      margin: 10px 0;
+      padding: 5px;
+    }
+    #content {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>DYNAMIC EDUCATION SITE</h1>
+
+  <!-- Class Dropdown -->
+  <label for="classes">Select Class:</label>
+  <select id="classes" onchange="loadSubjects()">
+    <option value="">--Select Class--</option>
+    <option value="class11">Class 11</option>
+    <option value="class12">Class 12</option>
+  </select>
+
+  <!-- Subject Dropdown -->
+  <label for="subjects">Select Subject:</label>
+  <select id="subjects" onchange="loadChapters()">
+    <option value="">--Select Subject--</option>
+  </select>
+
+  <!-- Chapter Dropdown -->
+  <label for="chapters">Select Chapter:</label>
+  <select id="chapters">
+    <option value="">--Select Chapter--</option>
+  </select>
+  <!-- Papers Dropdown -->
+  <label for="papers">Select Paper:</label>
+  <select id="papers">
+    <option value="">--Select Paper--</option>
+  </select>
+
+  <!-- Go Button -->
+  <button onclick="displayChapterContent()">Go</button>
+  <button onclick="clearSelections()">Clear</button>
+
+
+  <!-- Chapter Content -->
+  <div id="content">
+    <p>Select a chapter to view its content.</p>
+  </div>
+  <!-- paper Content -->
+  <div id="content">
+    <p>Select a paper to view its content.</p>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
